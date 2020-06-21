@@ -1,108 +1,45 @@
 [
-    {
-        "trigger": {
-            "url-filter": ".*youtube.com"
-        },
-        "action": {
-            "selector": "#masthead-ad, .ytd-iframe-companion-renderer, .video-ads, .ytp-ad-progress-list, #player-ads",
-            "type": "css-display-none"
-        }
-    }, {
-        "trigger": {
-            "url-filter": ".*youtube.com/get_video_metadata",
-            "load-type": [
-                "first-party"
-            ],
-            "resource-type": []
-        },
-        "action": {
-            "type": "block"
-        }
-    }, {
-        "trigger": {
-            "url-filter": ".*youtube.com/get_video_info",
-            "load-type": [
-                "first-party"
-            ],
-            "resource-type": []
-        },
-        "action": {
-            "type": "block"
-        }
-    }, {
-        "trigger": {
-            "url-filter": ".*youtube.com/get_midroll_info",
-            "load-type": [
-                "first-party"
-            ],
-            "resource-type": []
-        },
-        "action": {
-            "type": "block"
-        }
-    },
-    {
-        "trigger": {
-            "url-filter": "log_event",
-            "resource-type": [
-                "raw"
-            ],
-            "if-domain": [
-                ".*youtube.com"
-            ]
-        },
-        "action": {
-            "type": "block"
-        }
-    },
-    {
-        "trigger": {
-            "url-filter": "conversion",
-            "resource-type": [
-                "image"
-            ],
-            "if-domain": [
-                ".*youtube.com"
-            ]
-        },
-        "action": {
-            "type": "block"
-        }
-    },
-    {
-        "trigger": {
-            "url-filter": "doubleclick",
-            "resource-type": [],
-            "load-type": [
-                "third-party"
-            ]
-        },
-        "action": {
-            "type": "block"
-        }
-    },
-    {
-        "trigger": {
-            "url-filter": "adservice",
-            "resource-type": [],
-            "load-type": [
-                "third-party"
-            ]
-        },
-        "action": {
-            "type": "block"
-        }
-    },
-    {
-        "trigger": {
-            "url-filter": "s0.2mdn.net",
-            "resource-type": [],
-            "load-type": [
-                "third-party"
-            ]
-        },
-        "action": {
-            "type": "block"
-        }
-    }
+ {
+     "trigger": {
+         "url-filter": ".*youtube.com"
+     },
+     "action": {
+         "selector": ".ytp-ad-image-overlay, #player-ads",
+         "type": "css-display-none"
+     }
+ },{
+     "trigger": {
+         "url-filter": ".*youtube.com/get_video_info",
+         "load-type": [
+             "first-party"
+         ],
+         "resource-type": []
+     },
+     "action": {
+         "type": "block"
+     }
+ },
+ {
+     "trigger": {
+         "url-filter": ".*youtube.com/get_video_metadata",
+         "load-type": [
+             "first-party"
+         ],
+         "resource-type": []
+     },
+     "action": {
+         "type": "block"
+     }
+ }, {
+     "trigger": {
+         "url-filter": ".*youtube.com/get_midroll_info",
+         "load-type": [
+             "first-party"
+         ],
+         "resource-type": []
+     },
+     "action": {
+         "type": "block"
+     }
+ }
 ]
